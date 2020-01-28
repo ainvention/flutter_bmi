@@ -25,7 +25,12 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        backgroundColor: Colors.amber,
+        title: Text(
+          'BMI CALCULATOR',
+          style: TextStyle(
+              fontSize: 25.0, fontWeight: FontWeight.bold, color: Colors.white),
+        ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -65,7 +70,7 @@ class _InputPageState extends State<InputPage> {
           )),
           Expanded(
             child: ReusableCard(
-              colour: kActiveCardColour,
+              colour: kInactiveCardColour,
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -88,7 +93,7 @@ class _InputPageState extends State<InputPage> {
                     data: SliderTheme.of(context).copyWith(
                       inactiveTrackColor: Color(0xFF8D8E98),
                       activeTrackColor: Colors.white,
-                      thumbColor: Color(0XFFEB1555),
+                      thumbColor: Colors.amber,
                       overlayColor: Color(0x29EB1555),
                       thumbShape:
                           RoundSliderThumbShape(enabledThumbRadius: 15.0),
@@ -114,7 +119,7 @@ class _InputPageState extends State<InputPage> {
             children: <Widget>[
               Expanded(
                 child: ReusableCard(
-                  colour: kActiveCardColour,
+                  colour: kInactiveCardColour,
                   cardChild: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -156,7 +161,7 @@ class _InputPageState extends State<InputPage> {
               ),
               Expanded(
                 child: ReusableCard(
-                  colour: kActiveCardColour,
+                  colour: kInactiveCardColour,
                   cardChild: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
